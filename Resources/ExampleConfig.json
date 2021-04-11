@@ -1,0 +1,272 @@
+{
+    "version": "1.0",
+    "defaultProfile": "Default",
+    "lastProfile": "Spotify",
+    "asyncCommands": true,
+    "swapRotaryDirection": false,
+    "moduleSettings": {
+        "spotify.enable": true,
+        "spotify.legacyMode": false,
+        "spotify.volumeChangePercent": 5,
+        "spotify.seekTime": 30.0,
+        "spotify.playbackPositionPollRate": 10,
+        "spotify.timeFormat": "m:ss"
+    },
+    "commandDebounce": 100,
+    "commands": [
+        {
+            "name": "opencmd",
+            "desc": "Open Command Prompt",
+            "type": "native",
+            "exec": {
+                "run": "cmd.exe",
+                "args": "/k echo hi",
+                "startIn": null
+            }
+        },
+        {
+            "name": "dopowershell",
+            "desc": "Do something in PowerShell",
+            "type": "powershell",
+            "exec": {
+                "run": null,
+                "args": "Stop-Process -Name chrome.exe",
+                "startIn": null
+            }
+        }
+    ],
+    "profiles": [
+        {
+            "id": "Default",
+            "modules": [],
+            "detect": [],
+            "remainAfterAutoSwitch": false,
+            "lcd": {
+                "enabled": true,
+                "poll": 0,
+                "top": {
+                    "source": "text",
+                    "value": "Default Profile",
+                    "overflow": "threedots"
+                },
+                "bottom": {
+                    "source": "text",
+                    "value": "Try Something",
+                    "overflow": "threedots"
+                }
+            },
+            "bindings": [
+                {
+                    "event": "rotary.left",
+                    "commands": []
+                },
+                {
+                    "event": "rotary.right",
+                    "commands": []
+                },
+                {
+                    "event": "rotary.press",
+                    "commands": []
+                },
+                {
+                    "event": "rotary.doublepress",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.0",
+                    "commands": [
+                        "command.opencmd"
+                    ]
+                },
+                {
+                    "event": "button.release.0",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.1",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.1",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.2",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.2",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.3",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.3",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.4",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.4",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.5",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.5",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.6",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.6",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.7",
+                    "commands": []
+                },
+                {
+                    "event": "button.release.7",
+                    "commands": []
+                }
+            ]
+        },
+        {
+            "id": "Spotify",
+            "modules": [
+                "spotify"
+            ],
+            "detect": [
+                "%%SPOTIFY"
+            ],
+            "remainAfterAutoSwitch": false,
+            "lcd": {
+                "enabled": true,
+                "poll": 500,
+                "top": {
+                    "source": "module",
+                    "value": "spotify.title",
+                    "overflow": "scroll"
+                },
+                "bottom": {
+                    "source": "module",
+                    "value": "spotify.time.elapsedoutof",
+                    "overflow": "onedot"
+                }
+            },
+            "bindings": [
+                {
+                    "event": "rotary.left",
+                    "commands": [
+                        "spotify.volume.down"
+                    ]
+                },
+                {
+                    "event": "rotary.right",
+                    "commands": [
+                        "spotify.volume.up"
+                    ]
+                },
+                {
+                    "event": "rotary.press",
+                    "commands": [
+                        "spotify.toggle.pause"
+                    ]
+                },
+                {
+                    "event": "rotary.doublepress",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.0",
+                    "commands": [
+                        "spotify.toggle.shuffle"
+                    ]
+                },
+                {
+                    "event": "button.release.0",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.1",
+                    "commands": [
+                        "spotify.skip.back"
+                    ]
+                },
+                {
+                    "event": "button.release.1",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.2",
+                    "commands": [
+                        "spotify.seek.back"
+                    ]
+                },
+                {
+                    "event": "button.release.2",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.3",
+                    "commands": [
+                        "spotify.toggle.pause"
+                    ]
+                },
+                {
+                    "event": "button.release.3",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.4",
+                    "commands": [
+                        "spotify.seek.forward"
+                    ]
+                },
+                {
+                    "event": "button.release.4",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.5",
+                    "commands": [
+                        "spotify.skip.forward"
+                    ]
+                },
+                {
+                    "event": "button.release.5",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.6",
+                    "commands": [
+                        "spotify.toggle.mute"
+                    ]
+                },
+                {
+                    "event": "button.release.6",
+                    "commands": []
+                },
+                {
+                    "event": "button.press.7",
+                    "commands": [
+                        "profile.switch$Default"
+                    ]
+                },
+                {
+                    "event": "button.release.7",
+                    "commands": []
+                }
+            ]
+        }
+    ]
+}
