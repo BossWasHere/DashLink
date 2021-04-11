@@ -1,4 +1,4 @@
-# DashLink
+# <img src="https://raw.githubusercontent.com/BossWasHere/DashLink/main/Resources/icon.png" align="right" width="50" height="50"> DashLink
 
 > Version 0.1
 > (This project is a work-in-progress.)
@@ -83,3 +83,5 @@ This project is open to contributions. Use separate branches before merging with
 When using Spotify with this software, you agree to their [end-user agreement](https://www.spotify.com/legal/end-user-agreement/). This software is not endorsed nor created for or by Spotify, nor does it offer any warranty or take liability for the actions of you, the user, of the linked Spotify account.
 
 This software will never collect any of your Spotify data, and any data the software requires is only kept for the duration the software is running. Spotify grants developers access to their Web API under the Spotify Developer Terms of Service. For more information, see https://developer.spotify.com/terms/.
+
+<img src="https://raw.githubusercontent.com/BossWasHere/DashLink/main/Resources/Spotify_Logo_RGB_Green.png" align="left" height="60">
